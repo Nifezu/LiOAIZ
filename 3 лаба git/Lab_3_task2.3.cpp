@@ -49,7 +49,7 @@ for(int i = 1; i < n; i++) {
 	if(x==i){
  for (int j = 1; j < n+1; j++) {
 	 if(j==6){
-		 adj_matrixONE[x][j]=0;
+		 adj_matrixONE[x][j]=1;
 	 }
 	printf(" %d ", adj_matrixONE[x][j]);
 
@@ -61,7 +61,7 @@ for(int i = 1; i < n; i++) {
 	if(x==i){
  for (int j = 1; j < n+1; j++) {
 	 if(j==6){
-		 adj_matrixONE[x][j]=0;
+		 adj_matrixONE[x][j]=1;
 	 }
 	printf(" %d \n", adj_matrixONE[x][j]);
 

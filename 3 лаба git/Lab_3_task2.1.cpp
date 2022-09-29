@@ -55,26 +55,33 @@ for (int j = 0; j < n-1; j++){
 	    z[j]=1;
 		
 }
-for(int i = 0; i < n; i++) {
-	if((x!=i)&&(y!=i)){
- for (int j = 0; j < n; j++) {
-	 if((x!=j)&&(y!=j))
-   printf(" %d ", adj_matrixTWO[i][j]);
+int adj_matrixRES[m-1][n-1];
 
-}
- printf("\n");
-}
-}
-for(int i = 0; i < n-1; i++) {
-	if (i==3)
-    z[i]=0;
-	printf(" %d ", z[i]);
-}
 printf("\n\n");
 for(int j = 0; j < n-1; j++) {
 	if (j==3)
     z[j]=0;
-	printf(" %d \n", z[j]);
+	//printf(" %d \n", z[j]);
 }
+for(int i = 0; i < n; i++) {
+	if(i==n-1)
+	{
+		for(int j=0;j<n-1;j++)
+			printf(" %d ", z[j]);
+	}
+	else
+	if((x!=i)&&(y!=i)){
+ for (int j = 0; j < n; j++) {
+	 if((j==n-1))
+		 printf(" %d ", z[i]);
+	 if((x!=j)&&(y!=j)){
+   printf(" %d ", adj_matrixTWO[i][j]);
+	 }
+}
+ 
+ printf("\n");
+}
+}
+printf("\n");
 return 0;
 }
