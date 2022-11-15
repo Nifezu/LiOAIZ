@@ -2,7 +2,6 @@
 #include "time.h"
 #include <iostream>
 using namespace std;
-
 struct node
 {
 	int inf;  // полезная информация
@@ -71,19 +70,7 @@ int remove(){
 	return 0;
 	
 }
-int first(){
-	struct node *struc = head; // указатель, проходящий по списку установлен на начало списка
-	struct node *prev;// указатель на предшествующий удаляемому элемент
-	
-			if (head->next != NULL) 			// если найденный элемент последний в списке
-			{
-				printf("Последний элемент - %s, \n", struc->inf);
-				int vozvr = struc->inf;
-				return vozvr;
-			}
-	return 0;
-	
-}
+
 int main()
 {
 	struct node *struc = head;
@@ -116,24 +103,28 @@ int main()
             }
         }
     }
-	for (size_t i = 0; i < size; ++i) {
+	/*for (size_t i = 0; i < size; ++i) {
                 for (size_t j = 0; j < size; ++j)
                     cout << mas[i][j] << ' ';
                 cout << endl;
-            }
+            }*/
 	int *nodes = new int [size];
     
   for (int i = 0; i < size; i++)
     nodes[i] = 0;
+  
+  int verch;
+   cout << "\nВведите начальную вершину: ";
+  cin>> verch;
+  spstore(verch);
   int start = clock();
-  spstore(0);
   cout << "\nОбход в ширину: ";
   for (int i = 0; i < size; i++){
 	  if(nodes[i] == 0){
 		  nodes[i] = 1;
 		 // cout << i+1 << " ";
 	  }
-  while (!struc)
+	  while (head)
   { 
     int node = remove();
     nodes[node] = 2; 
@@ -151,7 +142,7 @@ int main()
   }
   int end = clock();
   double time = (end-start) / 1000.0;
-	printf("Time: %lf", time);
+	printf("\nTime: %lf", time);
  // cin.get();
   return 0;
 }
