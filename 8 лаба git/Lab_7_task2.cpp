@@ -103,18 +103,18 @@ int main()
             }
         }
     }
-	/*for (size_t i = 0; i < size; ++i) {
+	for (size_t i = 0; i < size; ++i) {
                 for (size_t j = 0; j < size; ++j)
                     cout << mas[i][j] << ' ';
                 cout << endl;
-            }*/
+            }
 	int *nodes = new int [size];
     
   for (int i = 0; i < size; i++)
     nodes[i] = 0;
   
   int verch;
-   cout << "\n¬ведите начальную вершину: ";
+  cout << "\n¬ведите стартовую вершину: ";
   cin>> verch;
   spstore(verch);
   int start = clock();
